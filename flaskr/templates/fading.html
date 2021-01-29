@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My exercise jquery</title>
+    <script src="/static/js/jquery.js"></script>
+
+    <script>
+        //make sure all stuff is ready
+        $("document").ready(function () {
+
+            $("#fade-in").on("click", function () {
+
+                $("#textBox").fadeIn(3000, function () {
+                    alert("I am Done Fading In");
+                });
+            });
+            $("#fade-out").on("click", function () {
+
+                $("#textBox").fadeOut("fast", function () {
+                    alert("I am Done Fading Out");
+                });
+            });
+        });
+
+$("document").ready(function(){
+
+$(".textCopy1").hover(highlightCopy);
+
+function highlightCopy(){
+    $(this).toggleClass("highlight");
+}
+
+});
+
+$("document").ready(function () {
+                $("#append").click(function(){
+                    $("p:first").append(" I just appended some copy.");
+                });
+                $("#prepend").click(function(){
+                    $("p:first").prepend(" I just appended some copy.");
+                });
+        });
+
+        $("document").ready(function () {
+            $("#grow").click(function(){
+                $("#textBox").animate({width:"1000px"}, 2000);
+            });
+            $("#move").click(function(){
+                $("#textBox").animate({marginLeft:"200px"}, 1000);
+            });
+            $("#bigger").click(function(){
+                $("#textBox").animate({fontSize:"40px"}, 2000);
+            });
+            $("#manything").click(function(){
+                $("#textBox").animate({width:"1000px",marginLeft:"400px",fontSize:"30px"}, 2000);
+            });
+
+        });
+    </script>
+    <style>
+        #textBox {
+            display: none;
+            width: 500px;
+            height: 200px;
+            background-color: #ccc;
+            position: absolute;
+            margin: 20px;
+        }
+
+        .highlight{
+            text-shadow: 1px 1px #cccccc;
+            background-color: blanchedalmond;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#" id="fade-in">Fade In</a> | <a href="#" id="fade-out">Fade Out</a>
+    <a href="#" id="append">Append</a>
+    <a href="#" id="prepend">Prepend</a>
+    <a href="#" id="grow">Grow</a> | <a href="#" id="move">Move</a> | <a href="#" id="bigger">Bigger</a> | <a href="#" id="manything">Many things</a>
+    <div id="textBox">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius cum sint facere, vero similique iure eum
+            recusandae ducimus officia in voluptatem voluptate nulla ipsum officiis nihil ut praesentium placeat.
+            Quibusdam blanditiis saepe, molestias voluptatum vel ratione dignissimos totam, fugit minus velit animi
+            laudantium deserunt aliquam, nam provident minima nisi quasi! Accusamus et at, eum magni autem odio minus
+            numquam.
+        </p>
+        <p>Sint nostrum esse maiores cumque enim corrupti magni illum quaerat pariatur vero quam, amet laboriosam. Eos
+            recusandae quasi expedita repellat odio, sit quae totam eveniet harum aliquid numquam, suscipit minima.
+            Quas illo aut magnam sint non aspernatur ea veniam inventore, hic laboriosam a consectetur libero
+            doloremque! Earum culpa corrupti, soluta veritatis expedita reiciendis? Eligendi earum pariatur tenetur
+            cupiditate ducimus consequatur.
+            Commodi, dolor? Perspiciatis ducimus iure accusantium debitis, voluptas corrupti soluta hic nostrum facere,
+            delectus aliquam facilis culpa, maxime sed modi. Molestias minus ad rem facere alias tenetur voluptates
+            ratione explicabo!
+        </p>
+    </div>
+    <div id="textBox1">
+       
+        <p class="textCopy1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eius cum sint facere, vero similique iure eum recusandae ducimus officia in voluptatem voluptate nulla ipsum officiis nihil ut praesentium placeat.
+        Quibusdam blanditiis saepe, molestias voluptatum vel ratione dignissimos totam, fugit minus velit animi laudantium deserunt aliquam, nam provident minima nisi quasi! Accusamus et at, eum magni autem odio minus numquam.
+        </p>
+        <p>Sint nostrum esse maiores cumque enim corrupti magni illum quaerat pariatur vero quam, amet laboriosam. Eos recusandae quasi expedita repellat odio, sit quae totam eveniet harum aliquid numquam, suscipit minima.
+        Quas illo aut magnam sint non aspernatur ea veniam inventore, hic laboriosam a consectetur libero doloremque! Earum culpa corrupti, soluta veritatis expedita reiciendis? Eligendi earum pariatur tenetur cupiditate ducimus consequatur.
+        Commodi, dolor? Perspiciatis ducimus iure accusantium debitis, voluptas corrupti soluta hic nostrum facere, delectus aliquam facilis culpa, maxime sed modi. Molestias minus ad rem facere alias tenetur voluptates ratione explicabo!
+        </p>
+        </div>
+
+</body>
+
+</html>
